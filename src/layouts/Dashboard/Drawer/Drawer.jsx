@@ -20,10 +20,10 @@ import { useNavigate } from 'react-router-dom';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 const manage = [
   { icon: <PieChartOutlineIcon />, text: 'Overview', link: '' },
-  { icon: <AddCircleOutlineIcon />, text: 'Add user', link: 'add-user' },
+  { icon: <AddCircleOutlineIcon />, text: 'Add Employee', link: 'add-user' },
   {
     icon: <PeopleAltIcon />,
-    text: 'Existing Users',
+    text: 'Existing Employees',
     link: 'existing-users'
   }
 ];

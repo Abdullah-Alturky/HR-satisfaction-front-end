@@ -12,7 +12,7 @@ function InfoCardContainer({ infoList }) {
             icon={info.icon}
             value={info.value}
           /> */}
-          <WalletCard text={info.value} sub={info.info} icon={info.icon} />
+          <WalletCard text={info.value} sub={info.label} icon={info.icon} />
         </>
       ))}
     </StyledInfoCardContainer>

@@ -47,7 +47,12 @@ export const CustomTablePagination = styled(TablePagination)(
         : theme.palette.common.black
     };
     border-radius: 50px;
-
+    
+    background-color: ${
+      theme.palette.mode === "dark"
+        ? theme.palette.grey[700] 
+        : theme.palette.grey[700]
+    };
     &:hover {
       background-color: ${
         theme.palette.mode === "dark"
@@ -111,4 +116,4 @@ export const CustomTablePagination = styled(TablePagination)(
     }
   }
   `
-);
+)

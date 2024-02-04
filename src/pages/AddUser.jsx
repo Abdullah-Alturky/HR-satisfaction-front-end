@@ -3,7 +3,7 @@ import Filling from "./Filling/Filling";
 
 const AddUser = () => {
   return (
-    <BasePage title="Add User">
+    <BasePage title="Add Employee">
       <Filling />
     </BasePage>
   );

@@ -36,6 +36,7 @@ const colors = [
 ];
 
 const BarChart = ({ dataSet }) => {
+  console.log(dataSet)
   const theme = useTheme();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(4);
@@ -48,9 +49,9 @@ const BarChart = ({ dataSet }) => {
   };
   console.log(dataSet);
   for (let i = 0; i < dataSet.length; i++) {
-    dataSet[i].number_of_employees = Math.round(
-      dataSet[i].average_time_spend / 60
-    );
+    dataSet[i].number_of_employees = 
+      dataSet[i].average_time_spend 
+
   }
   return (
     <ChartContainer>

@@ -81,6 +81,7 @@ const LineChart = ({ dataSet }) => {
           <Tooltip />
           <Legend />
           <Line
+          dot={true}
             type="monotone"
             dataKey="average_salary"
             stroke={theme.palette.primary.main}

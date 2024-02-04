@@ -214,6 +214,7 @@ const MyStepper = () => {
         // Will_Relocate: willRelocate,
         Critical: critical,
         "Trending Perf": trendingPref,
+        Trending_Perf: trendingPref,
         Percent_Remote: percentRemote,
         Emp_Competitive_1: empComp,
       };

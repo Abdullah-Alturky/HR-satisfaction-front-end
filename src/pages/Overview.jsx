@@ -33,7 +33,7 @@ const StyledCard = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
   padding: theme.spacing(2),
   borderRadius: "1rem",
-  boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
+  boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px ",
   height: "100%",
 }));
 const CardsContainer = styled(Box)(() => ({
@@ -160,7 +160,7 @@ const Overview = () => {
         }}
       >
         <Typography variant="h5" textAlign={"center"}>
-          Average Employees Satisfaction
+          Average Employees Salary
         </Typography>
         <StyledCenterBox>
           {salaryLoading && (

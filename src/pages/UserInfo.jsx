@@ -31,6 +31,7 @@ import { WalletCard } from "../components/Cards/Cards";
 const infoList = [
   {
     info: "Name",
+    label:"Name",
     value: "Ahmed",
     icon: (
       <PersonIcon
@@ -42,6 +43,7 @@ const infoList = [
   },
   {
     info: "Gender",
+    label:"Gender",
     value: "1000",
     icon: (
       <WcIcon
@@ -53,6 +55,7 @@ const infoList = [
   },
   {
     info: "Department",
+    label: "Department",
     value: "Software",
     icon: (
       <BusinessIcon
@@ -64,6 +67,7 @@ const infoList = [
   },
   {
     info: "GEO",
+    label: "GEO",
     value: "Software",
     icon: (
       <PublicIcon
@@ -75,6 +79,7 @@ const infoList = [
   },
   {
     info: "Role",
+    label: "Role",
     value: "Software",
     icon: (
       <MonetizationOnIcon
@@ -86,6 +91,7 @@ const infoList = [
   },
   {
     info: "salary",
+    label:"Salary",
     value: "Software",
     icon: (
       <MonetizationOnIcon
@@ -97,6 +103,7 @@ const infoList = [
   },
   {
     info: "last_evaluation",
+    label: "Last Evaluation Score",
     value: "Software",
     icon: (
       <QuizIcon
@@ -130,6 +137,7 @@ const infoList = [
   // },
   {
     info: "Talent_Level",
+    label: "Talent Level of the Employee",
     // label: "scale of the employee Talent ",
     value: "Software",
     icon: (
@@ -142,6 +150,7 @@ const infoList = [
   },
   {
     info: "promotion_last_5years",
+    label: "Promotion Last 5 Years",
     value: "Software",
     icon: (
       <UpgradeIcon
@@ -153,6 +162,7 @@ const infoList = [
   },
   {
     info: "Rising_Star",
+    label: "Promote-ability Level",
     value: "Software",
     icon: (
       <StarIcon
@@ -175,6 +185,7 @@ const infoList = [
   // },
   {
     info: "EMP_Sat_OnPrem_1",
+    label: "Office Satisfaction ",
     value: "Software",
     icon: (
       <PersonIcon
@@ -186,6 +197,8 @@ const infoList = [
   },
   {
     info: "EMP_Sat_Remote_1",
+    label: "Remote Work Satisfaction",
+
     value: "Software",
     icon: (
       <PersonIcon
@@ -197,6 +210,7 @@ const infoList = [
   },
   {
     info: "Emp_Collaborative_1",
+    label: "Competitive Work Perception",
     value: "Software",
     icon: (
       <PersonIcon
@@ -208,6 +222,7 @@ const infoList = [
   },
   {
     info: "time_spend_company",
+    label: "Years of service",
     value: "Software",
     icon: (
       <PersonIcon
@@ -219,6 +234,7 @@ const infoList = [
   },
   {
     info: "EMP_Engagement_1",
+    label: "Engagement Level",
     value: "Software",
     icon: (
       <PersonIcon
@@ -230,6 +246,7 @@ const infoList = [
   },
   {
     info: "Emp_Work_Status2",
+    label: "Work Status View ",
     value: "Software",
     icon: (
       <PersonIcon
@@ -241,6 +258,7 @@ const infoList = [
   },
   {
     info: "Emp_Identity",
+    label: "Employee identify in company",
     value: "Software",
     icon: (
       <PersonIcon
@@ -252,6 +270,7 @@ const infoList = [
   },
   {
     info: "Emp_Role",
+    label: "Employee perceive in the Role",
     value: "Software",
     icon: (
       <PersonIcon
@@ -263,6 +282,7 @@ const infoList = [
   },
   {
     info: "Emp_Position",
+    label: "Employee perceive in the Position",
     value: "Software",
     icon: (
       <PersonIcon
@@ -286,6 +306,7 @@ const infoList = [
   
   {
     info: "Critical",
+    label: "Employee Critical Level",
     value: "Software",
     icon: (
       <PersonIcon
@@ -296,7 +317,9 @@ const infoList = [
     ),
   },
   {
-    info: "Trending Perf",
+    info: "Trending_Perf",
+    info2: "Trending Perf",
+    label: "Employee performance",
     value: "Software",
     icon: (
       <PersonIcon
@@ -308,6 +331,7 @@ const infoList = [
   },
   {
     info: "Percent_Remote",
+    label: "Remote Work Percentage",
     value: "Software",
     icon: (
       <PersonIcon
@@ -319,6 +343,7 @@ const infoList = [
   },
   {
     info: "left_Company",
+    label: "Left the Company",
     value: "Software",
     icon: (
       <PersonIcon
@@ -330,6 +355,7 @@ const infoList = [
   },
   {
     info: "Emp_Competitive_1",
+    label: "Work Competitiveness",
     value: "Software",
     icon: (
       <PersonIcon
@@ -353,8 +379,14 @@ function UserInfo() {
       for (let element in infoList) {
         // check if the property/key is defined in the response.user
         if (response.user[infoList[element].info] !== undefined) {
+
           // use the key to get the corresponding value from the object
           infoList[element].value = response.user[infoList[element].info];
+        }
+        if (infoList[element].info2 !==undefined && response.user[infoList[element].info2] !== undefined) {
+          
+          // use the key to get the corresponding value from the object
+          infoList[element].value = response.user[infoList[element].info2];
         }
       }
       if (response.user.Name) {
@@ -366,7 +398,7 @@ function UserInfo() {
   console.log("response = ", response);
   return (
     <BasePage
-      title={"Employee Info"}
+      title={"Employee Information"}
       subtitle={`The employee's current status, salary, and other information will be displayed here.`}
     >
       <div
